@@ -317,3 +317,38 @@ AWS Kinesis Analytics is a part of the Kinesis suite that allows you to perform 
 # AWS MSK
 
 Amazon Managed Streaming for Apache Kafka (Amazon MSK) is a fully managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. It provides the control-plane operations, such as those for creating, updating, and deleting clusters, and lets you use Apache Kafka data-plane operations, such as those for producing and consuming data
+
+# Control Plane vs Data Plane
+
+## Control Plane
+
+The control plane is like the brain of the cloud system. It's responsible for making decisions about the system, such as where to route traffic, how to scale resources, and when to launch new instances. In other words, it's the management layer that controls the state and configuration of the system.
+
+Key Functions of the Control Plane:
+
+- Provisioning: Setting up and configuring resources.
+- Monitoring: Keeping an eye on the system's health and performance.
+- Scaling: Adjusting resources to meet demand.
+- Updating: Applying changes and updates to the system.
+
+### Why it exists
+
+The control plane exists to provide a centralized point of control for managing complex cloud environments. It allows for automated and orchestrated management of resources, which is essential for maintaining the desired state of the system, especially in large-scale and dynamic cloud environments.
+
+## Data Plane
+
+The data plane, on the other hand, is like the muscles of the cloud system. It's responsible for the actual handling and movement of data. When the control plane makes a decision, the data plane carries out the action by processing and transferring the data as needed.
+
+Key Functions of the Data Plane:
+
+- Data Transfer: Moving data between different parts of the system.
+- Data Processing: Executing the tasks required to manage the data.
+- Load Balancing: Distributing incoming data requests across resources.
+
+### Why it exists
+
+The data plane exists to handle the heavy lifting of data processing and movement. It ensures that data flows smoothly and efficiently through the system, which is crucial for delivering services to end-users without interruption.
+
+## Analogy
+
+Imagine you're at a busy airport. The control tower (control plane) oversees all the operations, directing planes when to take off and land, managing gate assignments, and ensuring safety protocols are followed. The runways and baggage handling systems (data plane) are where the action happens—planes take off and land, and luggage is moved to and from the aircraft.
