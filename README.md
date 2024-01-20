@@ -313,3 +313,7 @@ AWS Kinesis Analytics is a part of the Kinesis suite that allows you to perform 
 5. **Destination:**
    - The results of your analytics can be sent to various destinations for further use or permanent storage. These destinations can include AWS services like Amazon S3, Redshift, Elasticsearch, or even back to a Kinesis Stream or Firehose.
    - This flexibility allows you to integrate real-time analytics into broader data processing workflows.
+
+# AWS MSK
+
+Amazon Managed Streaming for Apache Kafka (Amazon MSK) is a fully managed service that makes it easy to build and run applications that use Apache Kafka to process streaming data. It provides the control-plane operations, such as those for creating, updating, and deleting clusters, and lets you use Apache Kafka data-plane operations, such as those for producing and consuming data
