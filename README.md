@@ -56,4 +56,34 @@ If you need dashboards, we can use Amazon QuickSight.
 
 Amazon CloudWatch is a monitoring service for AWS cloud resources and the applications you run on AWS. You can use Amazon CloudWatch to collect and track metrics, collect and monitor log files, set alarms, and automatically react to changes in your AWS resources.
 
-# Kafka
+# Why need Apache Kafka?
+
+## Scenario
+
+Imagine you have a startup with a popular app that allows users to share messages and media. Initially, your user base is small, so you manage the incoming data (messages, likes, uploads) easily. Your simple system reads data and processes it in real-time, handling tasks like updating user feeds, sending notifications, and storing messages.
+
+## Problem with Scaling
+
+As your app becomes more popular, the volume of data grows exponentially. You realize you need a better way to handle this data. So, you introduce a single queue system. Think of this queue as a line at a coffee shop, where orders are taken and processed one by one. It helps organize the flow of data and ensures that every piece of data is processed in order.
+
+However, as your app continues to grow, even this system starts to falter. The queue gets too long, causing delays. Also, different types of data (like messages, notifications, and uploads) all use the same queue, which isn't efficient. Processing heavy uploads slows down sending quick notifications, for example.
+
+## Apache Kafka to the Rescue
+
+This is where Apache Kafka comes in. Kafka is like upgrading from a single coffee shop line to a large, efficient cafeteria with multiple specialized lines and stations, each handling different types of orders simultaneously and efficiently.
+
+Kafka allows you to set up a distributed streaming platform. What does this mean?
+
+1. **Distributed**: Kafka runs on a cluster of servers, which means it can handle a lot more data and many more operations than a single server or queue.
+
+2. **Streaming**: It can handle continuous flow of data in real-time, perfect for live updates and instant reactions in your app.
+
+3. **Multiple Producers and Consumers**: Imagine many users (producers) sending data to Kafka, like messages or likes. Kafka sorts and stores this data. Then, various parts of your system (consumers), like the notification system or the message storage system, retrieve and process this data as needed. This is much more efficient than the single queue system.
+
+4. **Fault Tolerant**: If one server in the Kafka cluster fails, the others take over, ensuring your data processing doesn't stop.
+
+5. **Scalable**: As your startup grows, you can add more servers to the Kafka cluster to handle even more data.
+
+## General Requirements for Apache Kafka
+
+Kafka is ideal for scenarios where you have high-volume, high-velocity data that needs to be processed in real-time and distributed across different systems. It's great for applications that require real-time analytics, monitoring, and handling streaming data from multiple sources.
