@@ -87,3 +87,33 @@ Kafka allows you to set up a distributed streaming platform. What does this mean
 ## General Requirements for Apache Kafka
 
 Kafka is ideal for scenarios where you have high-volume, high-velocity data that needs to be processed in real-time and distributed across different systems. It's great for applications that require real-time analytics, monitoring, and handling streaming data from multiple sources.
+
+# Queue Architecture
+
+In a queue architecture, messages are published once and consumed once. Messages are stored in the queue until they are processed and deleted. It follows the point-to-point messaging pattern.
+
+**Limitations:** Limited support for multiple consumers and cannot guarantee that a message is delivered to all subscribers.
+
+Common tech:
+
+- RabbitMQ
+- Apache ActiveMQ
+- Amazon SQS
+
+# Pub Sub Architecture
+
+In a pub/sub architecture, messages are published once and consumed by multiple subscribers. Publishers send messages to a topic, and subscribers receive messages from topics they are interested in. It follows the publish-subscribe messaging pattern.
+
+**Limitations:** Cannot guarantee delivery of messages to all subscriber types, and a publisher could assume that a subscriber is listening to a channel when they are not.
+
+Common tech:
+
+- Google Cloud Pub/Sub
+- Redis
+- Apache Kafka
+
+# Kafka Architecture
+
+Kafka is a distributed streaming platform where messages are published once and can be consumed by one or more consumers. It is designed for high-throughput, fault-tolerant, and real-time data processing.
+
+Requires careful setup and monitoring, may be overkill for simple use cases, and can be complex to manage.
