@@ -92,6 +92,8 @@ Kafka is ideal for scenarios where you have high-volume, high-velocity data that
 
 In a queue architecture, messages are published once and consumed once. Messages are stored in the queue until they are processed and deleted. It follows the point-to-point messaging pattern.
 
+**Use Cases:** Task distribution, load leveling, and for ensuring that each message is processed by only one consumer.
+
 **Limitations:** Limited support for multiple consumers and cannot guarantee that a message is delivered to all subscribers.
 
 Common tech:
@@ -104,6 +106,8 @@ Common tech:
 
 In a pub/sub architecture, messages are published once and consumed by multiple subscribers. Publishers send messages to a topic, and subscribers receive messages from topics they are interested in. It follows the publish-subscribe messaging pattern.
 
+**Use Cases:** Broadcasting messages to multiple recipients, event-driven architectures, and decoupled communication between components.
+
 **Limitations:** Cannot guarantee delivery of messages to all subscriber types, and a publisher could assume that a subscriber is listening to a channel when they are not.
 
 Common tech:
@@ -115,6 +119,8 @@ Common tech:
 # Kafka Architecture
 
 Kafka is a distributed streaming platform where messages are published once and can be consumed by one or more consumers. It is designed for high-throughput, fault-tolerant, and real-time data processing.
+
+**Use Cases:** Log aggregation, stream processing, event sourcing, and real-time monitoring and analytics.
 
 Requires careful setup and monitoring, may be overkill for simple use cases, and can be complex to manage.
 
