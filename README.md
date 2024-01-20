@@ -117,3 +117,9 @@ Common tech:
 Kafka is a distributed streaming platform where messages are published once and can be consumed by one or more consumers. It is designed for high-throughput, fault-tolerant, and real-time data processing.
 
 Requires careful setup and monitoring, may be overkill for simple use cases, and can be complex to manage.
+
+Companies:
+
+- LinkedIn
+- Uber
+- Confluent
